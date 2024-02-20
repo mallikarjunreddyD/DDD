@@ -26,3 +26,13 @@ func NeWShipping(mode string, deliveryDate time.Time, product *entity.Item, addr
 		address: address,
 	}, nil
 }
+
+func (s Shipping) GetID() uuid.UUID {
+	return s.ship.ID
+}
+func (s Shipping) SetID(id uuid.UUID) {
+	if s.ship == nil {
+		s.ship = &entity.Ship{}
+	}
+	s.ship.ID = id
+}
