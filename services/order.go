@@ -5,12 +5,12 @@ import (
 	"log"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD/aggregate"
-	"github.com/mallikarjunreddyD/DDD/repositories/customer"
-	"github.com/mallikarjunreddyD/DDD/repositories/customer/memory"
-	"github.com/mallikarjunreddyD/DDD/repositories/customer/mongo"
-	"github.com/mallikarjunreddyD/DDD/repositories/product"
-	prodmem "github.com/mallikarjunreddyD/DDD/repositories/product/memory"
+	"github.com/mallikarjunreddyD/DDD3/aggregate"
+	"github.com/mallikarjunreddyD/DDD3/repositories/customer"
+	"github.com/mallikarjunreddyD/DDD3/repositories/customer/memory"
+	"github.com/mallikarjunreddyD/DDD3/repositories/customer/mongo"
+	"github.com/mallikarjunreddyD/DDD3/repositories/product"
+	prodmem "github.com/mallikarjunreddyD/DDD3/repositories/product/memory"
 )
 
 type OrderConfiguration func(os *OrderService) error

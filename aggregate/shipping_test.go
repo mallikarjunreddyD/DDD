@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mallikarjunreddyD/DDD/aggregate"
-	"github.com/mallikarjunreddyD/DDD/entity"
-	valueobjects "github.com/mallikarjunreddyD/DDD/valueObjects"
+	"github.com/mallikarjunreddyD/DDD3/aggregate"
+	"github.com/mallikarjunreddyD/DDD3/entity"
+	valueobjects "github.com/mallikarjunreddyD/DDD3/valueObjects"
 )
 
 func TestShipping_NewShipping(t *testing.T) {

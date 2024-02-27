@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD/aggregate"
+	"github.com/mallikarjunreddyD/DDD3/aggregate"
 )
 
 func Test_Hub(t *testing.T) {

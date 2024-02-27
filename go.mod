@@ -1,4 +1,4 @@
-module github.com/mallikarjunreddyD/DDD
+module github.com/mallikarjunreddyD/DDD3
 
 go 1.20
 

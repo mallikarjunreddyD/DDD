@@ -4,8 +4,8 @@ import (
 	"sync"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD/aggregate"
-	"github.com/mallikarjunreddyD/DDD/repositories/product"
+	"github.com/mallikarjunreddyD/DDD3/aggregate"
+	"github.com/mallikarjunreddyD/DDD3/repositories/product"
 )
 
 type MemoryProductRepository struct {

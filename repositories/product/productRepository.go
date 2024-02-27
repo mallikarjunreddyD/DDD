@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD/aggregate"
+	"github.com/mallikarjunreddyD/DDD3/aggregate"
 )
 
 var (

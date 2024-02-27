@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD/entity"
+	"github.com/mallikarjunreddyD/DDD3/entity"
 )
 
 var ErrInvalidProductData = errors.New("product must have valid name or description")

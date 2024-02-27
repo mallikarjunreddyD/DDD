@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD/aggregate"
+	"github.com/mallikarjunreddyD/DDD3/aggregate"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -41,7 +41,7 @@ func New(ctx context.Context, connectionString string) (*MongoRespository, error
 		return nil, err
 	}
 
-	db := client.Database("ddd")
+	db := client.Database("DDD3")
 	customers := db.Collection("customers")
 
 	return &MongoRespository{

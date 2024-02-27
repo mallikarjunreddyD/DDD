@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD/aggregate"
-	valueobjects "github.com/mallikarjunreddyD/DDD/valueObjects"
+	"github.com/mallikarjunreddyD/DDD3/aggregate"
+	valueobjects "github.com/mallikarjunreddyD/DDD3/valueObjects"
 )
 
 func init_shippings(t *testing.T) []aggregate.Shipping {
