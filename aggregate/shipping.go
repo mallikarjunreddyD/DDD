@@ -36,3 +36,12 @@ func (s Shipping) SetID(id uuid.UUID) {
 	}
 	s.ship.ID = id
 }
+func (s Shipping) GetStatus() string {
+	return s.ship.Status
+}
+func (s Shipping) SetStatus(status string) {
+	if s.ship == nil {
+		s.ship = &entity.Ship{}
+	}
+	s.ship.Status = status
+}

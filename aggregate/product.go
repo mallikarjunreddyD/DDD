@@ -22,7 +22,7 @@ func NewProduct(name, desc string, price float64) (Product, error) {
 
 	return Product{
 		item: &entity.Item{
-			ID:   uuid.UUID{},
+			ID:   uuid.New(),
 			Name: name,
 			Desc: desc,
 		},
