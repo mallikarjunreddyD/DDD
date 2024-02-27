@@ -4,9 +4,9 @@ import (
 	"log"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD3/aggregate"
-	"github.com/mallikarjunreddyD/DDD3/repositories/shipping"
-	shipmem "github.com/mallikarjunreddyD/DDD3/repositories/shipping/memory"
+	"github.com/mallikarjunreddyD/DDD/aggregate"
+	"github.com/mallikarjunreddyD/DDD/repositories/shipping"
+	shipmem "github.com/mallikarjunreddyD/DDD/repositories/shipping/memory"
 )
 
 type ShippingConfiguration func(ss *ShippingService) error

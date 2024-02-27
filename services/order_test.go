@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD3/aggregate"
+	"github.com/mallikarjunreddyD/DDD/aggregate"
 )
 
 func init_products(t *testing.T) []aggregate.Product {

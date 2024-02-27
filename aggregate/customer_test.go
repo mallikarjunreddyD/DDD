@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/mallikarjunreddyD/DDD3/aggregate"
+	"github.com/mallikarjunreddyD/DDD/aggregate"
 )
 
 func TestCustomer_NewCustomer(t *testing.T) {

@@ -1,14 +1,16 @@
 package services
 
 import (
+	"context"
 	"log"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD3/aggregate"
-	"github.com/mallikarjunreddyD/DDD3/repositories/customer"
-	"github.com/mallikarjunreddyD/DDD3/repositories/customer/memory"
-	"github.com/mallikarjunreddyD/DDD3/repositories/product"
-	prodmem "github.com/mallikarjunreddyD/DDD3/repositories/product/memory"
+	"github.com/mallikarjunreddyD/DDD/aggregate"
+	"github.com/mallikarjunreddyD/DDD/repositories/customer"
+	"github.com/mallikarjunreddyD/DDD/repositories/customer/memory"
+	"github.com/mallikarjunreddyD/DDD/repositories/customer/mongo"
+	"github.com/mallikarjunreddyD/DDD/repositories/product"
+	prodmem "github.com/mallikarjunreddyD/DDD/repositories/product/memory"
 )
 
 type OrderConfiguration func(os *OrderService) error
@@ -39,6 +41,17 @@ func withCustomerRepository(cr customer.CustomerRepository) OrderConfiguration {
 func withMemoryCustomerRepository() OrderConfiguration {
 	cr := memory.New()
 	return withCustomerRepository(cr)
+}
+func withMongoCustomerRepository(ctx context.Context, connectionString string) OrderConfiguration {
+	return func(os *OrderService) error {
+		cr, err := mongo.New(ctx, connectionString)
+		if err != nil {
+			return err
+		}
+		os.customers = cr
+		return nil
+	}
+
 }
 func withProductRepository(cr product.ProductRepository) OrderConfiguration {
 	return func(os *OrderService) error {

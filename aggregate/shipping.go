@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/mallikarjunreddyD/DDD3/entity"
-	valueobjects "github.com/mallikarjunreddyD/DDD3/valueObjects"
+	"github.com/mallikarjunreddyD/DDD/entity"
+	valueobjects "github.com/mallikarjunreddyD/DDD/valueObjects"
 )
 
 type Shipping struct {
