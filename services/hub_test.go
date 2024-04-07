@@ -1,6 +1,7 @@
 package services
 
 import (
+	"context"
 	"testing"
 
 	"github.com/google/uuid"
@@ -12,7 +13,8 @@ func Test_Hub(t *testing.T) {
 	shippings := init_shippings(t)
 
 	os, err := NewOrderService(
-		withMemoryCustomerRepository(),
+		//withMemoryCustomerRepository(),
+		withMongoCustomerRepository(context.Background(), "mongodb+srv://arjun753016:123456789@ddd.nxxdqcr.mongodb.net/?retryWrites=true&w=majority&appName=DDD"),
 		withMemoryProductRepository(),
 	)
 	if err != nil {

@@ -55,12 +55,13 @@ func TestOrder_NewOrderService(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	order := []uuid.UUID{
+	productIDs := []uuid.UUID{
 		products[0].GetID(),
 		products[1].GetID(),
+		products[2].GetID(),
 	}
 
-	_, err = os.CreateOrder(cust.GetID(), order)
+	_, err = os.CreateOrder(cust.GetID(), productIDs)
 	if err != nil {
 		t.Fatal(err)
 	}

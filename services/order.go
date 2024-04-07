@@ -16,8 +16,8 @@ import (
 type OrderConfiguration func(os *OrderService) error
 
 type OrderService struct {
-	customers customer.CustomerRepository
-	products  product.ProductRepository
+	customers customer.CustomerRepository //memory, mongo, mysql
+	products  product.ProductRepository   // memory, mongo, mysql
 }
 
 func NewOrderService(cfgs ...OrderConfiguration) (*OrderService, error) {
